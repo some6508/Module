@@ -1,0 +1,23 @@
+run_time1=`date "+%s"`
+echo "\n挂载上传目录..."
+cd /sdcard/0/GitHub/
+echo "\n加载git文件..."
+git init
+echo "\n加载上传文件..."
+ls
+git config --global user.email "3180965797@qq.com"
+git config --global user.name "some6508"
+echo "\n添加远程GitHub链接..."
+git remote add origin https://github.com/some6508/Module.git
+git add .
+git commit -m "最新提交"
+echo "\n正在上传..."
+echo "\n重置仓库..."
+echo "\n请输入账号密码..."
+echo "\n输入密码不会显示出来"
+git push origin master -f
+echo "\n...上传完成"
+echo "\n删除git文件..."
+rm -rf .git/*
+run_time2=`date "+%s"`
+echo "\n本次上传已使用$((run_time2-run_time1))秒..."
