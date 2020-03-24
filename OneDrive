@@ -1,1 +1,5 @@
 Download=https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly9oOGNzLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL3N2aXAwMzI2XzM2NWExX21lL0VWYnZHMmJjeUNoTmdhdEluUGpSTVlrQkFDRjdiODYzX3l6Zkc3ZUI5R1RlMXc/ZT1PZnR0VUs=.zip
+download_lanzou() {
+url_lanzou=https://vip.d0.baidupan.com/file/`curl -skA "(Linux; Android 10; MI 8 Lite) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.141 Mobile Safari/537.36" https://www.lanzous.com/tp/$1 | egrep "\"\?|'\?" | sed "s/'//g;"'s/"//g;s/.*?/?/g'`
+curl -kLH "Accept-Language: zh-CN,en-US;q=0.9" $url_lanzou -o $2
+}
